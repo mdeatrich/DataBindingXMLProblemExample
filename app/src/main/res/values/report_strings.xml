@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cancelButtonText">Cancel</string>
+    <string name="saveButtonText">Save</string>
+
+
+    <!-- the day -->
+    <!-- initialize to today -->
+
+
+    <!-- Intensity Options for Urges and Ratings -->
+
+    <!-- used for the ratings scale -->
+
+
+    <!-- Self-Harm -->
+
+
+    <!-- Emotions -->
+
+    <!-- Substance Abuse -->
+
+    <!-- Medications -->
+
+
+    <!--Actions -->
+
+    <!-- DBT Skill Use -->
+
+    <!-- Skills Practiced -->
+
+
+</resources>

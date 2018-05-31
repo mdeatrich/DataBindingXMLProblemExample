@@ -1,0 +1,28 @@
+<resources>
+    <string name="action_help_text">Help</string>
+    <string name="report_saved_text">Report Saved.</string>
+    <string name="undo_text">UNDO</string>
+    <string name="report_deleted_text">Report deleted.</string>
+    <string name="action_delete_text">Delete</string>
+
+
+    <!-- Utility -->
+
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+    <string name="ZERO">0</string>
+    <string name="ONE">1</string>
+    <string name="TWO">2</string>
+    <string name="THREE">3</string>
+    <string name="FOUR">4</string>
+    <string name="FIVE">5</string>
+
+
+</resources>

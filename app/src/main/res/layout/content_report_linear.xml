@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="report" type="net.deatrich.app.databindingxmlproblemexample.data.DailyReport"/>
+    </data>
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="48dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_section_label"
+                android:text="Section 1"
+                style="@style/FormSectionHead"/>
+
+            <TextView
+                android:id="@+id/id_tv_integer1_label"
+                style="@style/FormFieldLabel"
+                android:text="Integer 1" />
+
+            <LinearLayout
+                android:id="@+id/id_integer_one_wrapper"
+                style="@style/FormLinearLayoutWrapper">
+
+                <TextView
+                    android:id="@+id/id_tv_integer_one_low_scale_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="lowest" />
+
+                <TextView
+                    android:id="@+id/id_tv_integer_one_high_scale_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="highest" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_zero_to_5_scale_integer_one"
+                style="@style/FormLinearLayoutWrapper">
+
+                <RadioGroup
+                    android:id="@+id/integer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:text="@string/ZERO"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer1 == 0}"
+                        android:onClick="@{()->report.setInteger1(0)}"/>
+
+                    <RadioButton
+                        android:text="@string/ONE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer1 == 1}"
+                        android:onClick="@{()->report.setInteger1(1)}"/>
+
+                    <RadioButton
+                        android:text="@string/TWO"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer1 == 2}"
+                        android:onClick="@{()->report.setInteger1(2)}"/>
+
+                    <RadioButton
+                        android:text="@string/THREE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer1 == 3}"
+                        android:onClick="@{()->report.setInteger1(3)}"/>
+
+                    <RadioButton
+                        android:text="@string/FOUR"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer1 == 4}"
+                        android:onClick="@{()->report.setInteger1(4)}"/>
+
+                    <RadioButton
+                        android:text="@string/FIVE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer1 == 5}"
+                        android:onClick="@{()->report.setInteger1(5)}"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- integer2 -->
+            <TextView
+                android:id="@+id/id_tv_integer_two_label"
+                style="@style/FormFieldLabel"
+                android:text="integer2" />
+
+            <LinearLayout
+                android:id="@+id/id_ll_scale_desc_wrapper_integer_two"
+                style="@style/FormLinearLayoutWrapper">
+
+                <TextView
+                    android:id="@+id/id_tv_low_scale_label_integer_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="lowest" />
+
+                <TextView
+                    android:id="@+id/id_tv_high_scale_label_integer_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="highest" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_zero_to_5_scale_integer_two"
+                style="@style/FormLinearLayoutWrapper">
+
+                <RadioGroup
+                    android:id="@+id/integer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:text="@string/ZERO"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer2 == 0}"
+                        android:onClick="@{()->report.setInteger2(0)}"/>
+
+                    <RadioButton
+                        android:text="@string/ONE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer2 == 1}"
+                        android:onClick="@{()->report.setInteger2(1)}"/>
+
+                    <RadioButton
+                        android:text="@string/TWO"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer2 == 2}"
+                        android:onClick="@{()->report.setInteger2(2)}"/>
+
+                    <RadioButton
+                        android:text="@string/THREE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer2 == 3}"
+                        android:onClick="@{()->report.setInteger2(3)}"/>
+
+                    <RadioButton
+                        android:text="@string/FOUR"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer2 == 4}"
+                        android:onClick="@{()->report.setInteger2(4)}"/>
+
+                    <RadioButton
+                        android:text="@string/FIVE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer2 == 5}"
+                        android:onClick="@{()->report.setInteger2(5)}"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/id_tv_integer3_label"
+                style="@style/FormFieldLabel"
+                android:text="integer3" />
+
+            <LinearLayout
+                android:id="@+id/id_ll_scale_desc_wrapper_integer3"
+                style="@style/FormLinearLayoutWrapper">
+
+                <TextView
+                    android:id="@+id/id_tv_low_scale_label_integer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:text="lowest" />
+
+                <TextView
+                    android:id="@+id/id_tv_high_scale_label_integer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="highest" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_zero_to_5_scale_integer3"
+                style="@style/FormLinearLayoutWrapper">
+
+                <RadioGroup
+                    android:id="@+id/integer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:text="@string/ZERO"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer3 == 0}"
+                        android:onClick="@{()->report.setInteger3(0)}"/>
+
+                    <RadioButton
+                        android:text="@string/ONE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer3 == 1}"
+                        android:onClick="@{()->report.setInteger3(1)}"/>
+
+                    <RadioButton
+                        android:text="@string/TWO"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer3 == 2}"
+                        android:onClick="@{()->report.setInteger3(2)}"/>
+
+                    <RadioButton
+                        android:text="@string/THREE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer3 == 3}"
+                        android:onClick="@{()->report.setInteger3(3)}"/>
+
+                    <RadioButton
+                        android:text="@string/FOUR"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer3 == 4}"
+                        android:onClick="@{()->report.setInteger3(4)}"/>
+
+                    <RadioButton
+                        android:text="@string/FIVE"
+                        style="@style/FormRadioButton"
+                        android:checked="@{report.integer3 == 5}"
+                        android:onClick="@{()->report.setInteger3(5)}"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--Other Emotions -->
+
+
+            <EditText
+                android:id="@+id/string1"
+                android:hint="string1"
+                android:inputType="textAutoCorrect|textCapSentences|textMultiLine"
+                style="@style/FormMultilineEditText"
+                android:layout_marginBottom="30dp"
+                android:text="@={report.string1}"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
