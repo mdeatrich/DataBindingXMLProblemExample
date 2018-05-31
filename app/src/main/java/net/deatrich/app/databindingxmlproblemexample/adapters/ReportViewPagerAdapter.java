@@ -16,9 +16,10 @@ public class ReportViewPagerAdapter extends FragmentPagerAdapter {
 
     private static ArrayList<Integer> mLayoutIds = new ArrayList<>();
     private static ArrayList<String> mSectionTitles = new ArrayList<>();
+    private static ArrayList<ReportFragment> mReportFragments = new ArrayList<>();
 
     private static int numSections;
-    private final Date reportDate;
+    private static Date reportDate;
 
 
     private final FragmentManager fragmentManager;
@@ -27,13 +28,25 @@ public class ReportViewPagerAdapter extends FragmentPagerAdapter {
     public ReportViewPagerAdapter(FragmentManager fm, Context context, Date reportDate) {
         super(fm);
         fragmentManager = fm;
+
         this.reportDate = reportDate;
 
-        mLayoutIds.add(R.layout.content_report_constraint);
-        mSectionTitles.add("ConstraintLayout");
+        if (reportDate == null)
+            return;
 
-        mLayoutIds.add(R.layout.content_report_linear);
-        mSectionTitles.add("LinearLayout");
+        if (mReportFragments.size() == 0) {
+            mLayoutIds.add(R.layout.content_report_constraint);
+            mSectionTitles.add("ConstraintLayout");
+
+            mReportFragments.add(ReportFragment.newInstance(R.layout.content_report_constraint, reportDate));
+        }
+
+        if (mReportFragments.size() == 1) {
+            mLayoutIds.add(R.layout.content_report_linear);
+            mSectionTitles.add("LinearLayout");
+
+            mReportFragments.add(ReportFragment.newInstance(R.layout.content_report_linear, reportDate));
+        }
 
 
         numSections = mLayoutIds.size();
@@ -50,8 +63,7 @@ public class ReportViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int sectionIndex) {
 
-        return ReportFragment.newInstance(mLayoutIds.get(sectionIndex), reportDate);
-
+        return mReportFragments.get(sectionIndex);
 
     }
 
