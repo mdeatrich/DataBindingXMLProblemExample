@@ -18,7 +18,7 @@
                 android:id="@+id/id_section_label"
                 android:text="Section 1"
                 style="@style/FormSectionHead"
-                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
